@@ -1,0 +1,8 @@
+# ── Núcleo ────────────────────────────────────────────────────────────────────
+ai-edge-litert>=2.1.0          # runtime TFLite (suporta Python 3.13 / aarch64)
+opencv-python-headless>=4.8.0  # captura e processamento de vídeo (sem GUI)
+numpy>=1.23.0
+
+# ── Raspberry Pi (geralmente já inclusos no Raspberry Pi OS) ──────────────────
+# RPi.GPIO                     # controle GPIO
+# picamera2                    # câmera nativa Pi

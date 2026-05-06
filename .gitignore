@@ -1,0 +1,40 @@
+# Runtime/generated files
+__pycache__/
+*.py[cod]
+*.log
+.camera_rotation
+.pytest_cache/
+.mypy_cache/
+
+# Python environments
+venv/
+.venv/
+env/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.mobileprovision
+
+# Backup and migration artifacts. Never publish these.
+backups/
+*.tar
+*.tar.gz
+*.zip
+system-info.txt
+dpkg-packages.tsv
+pip-freeze.txt
+
+# Generated mobile artifacts
+*.apk
+*.aab
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
