@@ -4,13 +4,13 @@ After=network.target
 
 [Service]
 Type=simple
-User=oper
-WorkingDirectory=/home/oper/elderly-monitor
-ExecStart=/home/oper/elderly-monitor/venv/bin/python main.py
+User=monitor
+WorkingDirectory=/home/monitor/elderly-monitor
+ExecStart=/home/monitor/elderly-monitor/venv/bin/python main.py
 Restart=on-failure
 RestartSec=10
-StandardOutput=append:/home/oper/elderly-monitor/monitor.log
-StandardError=append:/home/oper/elderly-monitor/monitor.log
+StandardOutput=append:/home/monitor/elderly-monitor/monitor.log
+StandardError=append:/home/monitor/elderly-monitor/monitor.log
 Environment=PYTHONUNBUFFERED=1
 
 [Install]

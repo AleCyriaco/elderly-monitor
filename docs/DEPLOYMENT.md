@@ -12,7 +12,7 @@ This guide installs the elderly monitor on a Raspberry Pi from a clean clone.
 
 ## 1. Prepare the Raspberry Pi
 
-Create or use a non-root user. The examples below use `oper`, but any user works if you update the service file.
+Create or use a non-root user. The examples below use `monitor`, but any user works if you update the service file.
 
 ```bash
 sudo apt-get update
@@ -22,7 +22,7 @@ sudo apt-get install -y git python3 python3-venv python3-pip network-manager
 Clone the repository:
 
 ```bash
-cd /home/oper
+cd /home/monitor
 git clone <REPOSITORY_URL> elderly-monitor
 cd elderly-monitor
 ```
@@ -83,7 +83,7 @@ http://<raspberry-pi-ip>:8080/
 
 ## 6. Install as a Service
 
-Copy and enable the systemd unit. If your deployment user or path is different from `/home/oper/elderly-monitor`, edit `monitor.service` first.
+Copy and enable the systemd unit. If your deployment user or path is different from `/home/monitor/elderly-monitor`, edit `monitor.service` first.
 
 ```bash
 sudo cp monitor.service /etc/systemd/system/monitor.service
@@ -102,7 +102,7 @@ journalctl -u monitor.service -f
 ## 7. Updating a Deployment
 
 ```bash
-cd /home/oper/elderly-monitor
+cd /home/monitor/elderly-monitor
 git pull
 source venv/bin/activate
 pip install -r requirements.txt
@@ -115,7 +115,7 @@ For a source-only backup:
 
 ```bash
 rsync -aH --exclude venv --exclude __pycache__ --exclude '*.log' \
-  /home/oper/elderly-monitor/ ./elderly-monitor-backup/
+  /home/monitor/elderly-monitor/ ./elderly-monitor-backup/
 ```
 
 For a full migration, preserve:

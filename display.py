@@ -74,7 +74,7 @@ class LocalDisplay:
             except PermissionError:
                 log.warning(
                     "Display local: sem permissão em /dev/fb0 "
-                    "(adicione o usuário ao grupo 'video': sudo usermod -aG video oper)"
+                    "(adicione o usuário ao grupo 'video': sudo usermod -aG video monitor)"
                 )
             except Exception as e:
                 log.warning(f"Display local: falhou ao abrir framebuffer — {e}")
